@@ -1,157 +1,42 @@
-
 # Python
-
 __pycache__/
 *.py[cod]
-*$py.class
-*.so
-
-# Distribution / Packaging
-
-.Python
-build/
-develop-eggs/
-dist/
-downloads/
-eggs/
-.eggs/
-lib/
-lib64/
-parts/
-sdist/
-var/
-wheels/
-share/python-wheels/
-*.egg-info/
-.installed.cfg
-*.egg
-MANIFEST
-
-# PyInstaller
-
-*.manifest
-*.spec
-
-# Installer logs
-
-pip-log.txt
-pip-delete-this-directory.txt
-
-# Testing / Coverage
-
-htmlcov/
-.tox/
-.nox/
-.coverage
-.coverage.*
-.cache/
-nosetests.xml
-coverage.xml
-*.cover
-*.py,cover
-.hypothesis/
-.pytest_cache/
-cover/
-
-# Environment / Secrets
-
-.env
-*.env
 .venv/
-env/
 venv/
-ENV/
-env.bak/
-venv.bak/
+*.egg-info/
+.pytest_cache/
+.coverage
+htmlcov/
 
-
-# Jupyter
-
-.ipynb_checkpoints/
-**/.ipynb_checkpoints/
-
-
-# IDEs / Editors
-
+# Local configuration
+.env
+.env.*
 .idea/
 .vscode/
 *.swp
-*.swo
-*~
-.cursor/
 
-# Operating System
-
-.DS_Store
-.DS_Store?
-._*
-.Spotlight-V100
-.Trashes
-ehthumbs.db
-Thumbs.db
-
-# Logs / Databases
-
+# Logs, databases, and generated data
 *.log
-application.log
 *.sqlite3
 *.db
+*.csv.gz
+*.parquet
+data/raw/
+data/processed/
 
-# Apache Spark / Hadoop
-
-metastore_db/
-derby.log
-spark-warehouse/
-checkpoint/
-*.checkpoint/
-spark-events/
-
-
-# Apache Airflow
-
+# Airflow
 airflow/logs/
 airflow/airflow.cfg
 airflow/airflow.db
-airflow/airflow-webserver.pid
-airflow/airflow-webserver.err
-airflow/airflow-webserver.out
-airflow/airflow-worker.pid
-airflow/__pycache__/
-airflow/.pytest_cache/
+airflow/*.pid
 
-
-# Apache Kafka / ZooKeeper
-
-kafka-logs/
-zookeeper/
-version-2/
-*.snapshot
-*.log.1
-
-# Kafka generated data
+# Kafka, ZooKeeper, and Spark
 kafka/data/
 kafka/logs/
-
-# AI / ML Models
-
-*.pkl
-*.pickle
-*.h5
-*.hdf5
-*.joblib
-*.onnx
-*.pt
-*.pth
-*.safetensors
-*.bin
-
-
-# Large Data Files
-
-*.parquet
-*.feather
-*.csv.gz
-*.tar.gz
-
-data/raw/
-data/processed/
+kafka-logs/
+zookeeper/
+metastore_db/
+spark-warehouse/
+spark-events/
+checkpoint/
+*.checkpoint/
