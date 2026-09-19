@@ -1,12 +1,13 @@
-# Byte-compiled / optimized / C-extensions
+
+# Python
+
 __pycache__/
 *.py[cod]
 *$py.class
-
-# C extensions
 *.so
 
-# Distribution / packaging
+# Distribution / Packaging
+
 .Python
 build/
 develop-eggs/
@@ -27,20 +28,23 @@ share/python-wheels/
 MANIFEST
 
 # PyInstaller
+
 *.manifest
 *.spec
 
 # Installer logs
+
 pip-log.txt
 pip-delete-this-directory.txt
 
-# Unit test / coverage reports
+# Testing / Coverage
+
 htmlcov/
 .tox/
 .nox/
 .coverage
 .coverage.*
-.cache
+.cache/
 nosetests.xml
 coverage.xml
 *.cover
@@ -49,21 +53,26 @@ coverage.xml
 .pytest_cache/
 cover/
 
-# Environments & Virtualenv
+# Environment / Secrets
+
 .env
-.venv
+*.env
+.venv/
 env/
 venv/
 ENV/
 env.bak/
 venv.bak/
-*.env
 
-# Jupyter Notebook
-.ipynb_checkpoints
-*/.ipynb_checkpoints/*
 
-# IDEs and Code Editors
+# Jupyter
+
+.ipynb_checkpoints/
+**/.ipynb_checkpoints/
+
+
+# IDEs / Editors
+
 .idea/
 .vscode/
 *.swp
@@ -71,7 +80,8 @@ venv.bak/
 *~
 .cursor/
 
-# Operating System Files
+# Operating System
+
 .DS_Store
 .DS_Store?
 ._*
@@ -80,13 +90,15 @@ venv.bak/
 ehthumbs.db
 Thumbs.db
 
-# Logs and databases
+# Logs / Databases
+
 *.log
 application.log
 *.sqlite3
 *.db
 
-# Apache Spark & Hadoop
+# Apache Spark / Hadoop
+
 metastore_db/
 derby.log
 spark-warehouse/
@@ -94,7 +106,9 @@ checkpoint/
 *.checkpoint/
 spark-events/
 
+
 # Apache Airflow
+
 airflow/logs/
 airflow/airflow.cfg
 airflow/airflow.db
@@ -102,15 +116,24 @@ airflow/airflow-webserver.pid
 airflow/airflow-webserver.err
 airflow/airflow-webserver.out
 airflow/airflow-worker.pid
+airflow/__pycache__/
+airflow/.pytest_cache/
 
-# Apache Kafka & ZooKeeper
+
+# Apache Kafka / ZooKeeper
+
 kafka-logs/
 zookeeper/
 version-2/
 *.snapshot
 *.log.1
 
-# AI / ML Models and Data (Large files)
+# Kafka generated data
+kafka/data/
+kafka/logs/
+
+# AI / ML Models
+
 *.pkl
 *.pickle
 *.h5
@@ -121,9 +144,14 @@ version-2/
 *.pth
 *.safetensors
 *.bin
+
+
+# Large Data Files
+
 *.parquet
 *.feather
 *.csv.gz
 *.tar.gz
+
 data/raw/
 data/processed/
