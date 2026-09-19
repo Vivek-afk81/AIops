@@ -1,0 +1,129 @@
+# Byte-compiled / optimized / C-extensions
+__pycache__/
+*.py[cod]
+*$py.class
+
+# C extensions
+*.so
+
+# Distribution / packaging
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# PyInstaller
+*.manifest
+*.spec
+
+# Installer logs
+pip-log.txt
+pip-delete-this-directory.txt
+
+# Unit test / coverage reports
+htmlcov/
+.tox/
+.nox/
+.coverage
+.coverage.*
+.cache
+nosetests.xml
+coverage.xml
+*.cover
+*.py,cover
+.hypothesis/
+.pytest_cache/
+cover/
+
+# Environments & Virtualenv
+.env
+.venv
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+*.env
+
+# Jupyter Notebook
+.ipynb_checkpoints
+*/.ipynb_checkpoints/*
+
+# IDEs and Code Editors
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+.cursor/
+
+# Operating System Files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Logs and databases
+*.log
+application.log
+*.sqlite3
+*.db
+
+# Apache Spark & Hadoop
+metastore_db/
+derby.log
+spark-warehouse/
+checkpoint/
+*.checkpoint/
+spark-events/
+
+# Apache Airflow
+airflow/logs/
+airflow/airflow.cfg
+airflow/airflow.db
+airflow/airflow-webserver.pid
+airflow/airflow-webserver.err
+airflow/airflow-webserver.out
+airflow/airflow-worker.pid
+
+# Apache Kafka & ZooKeeper
+kafka-logs/
+zookeeper/
+version-2/
+*.snapshot
+*.log.1
+
+# AI / ML Models and Data (Large files)
+*.pkl
+*.pickle
+*.h5
+*.hdf5
+*.joblib
+*.onnx
+*.pt
+*.pth
+*.safetensors
+*.bin
+*.parquet
+*.feather
+*.csv.gz
+*.tar.gz
+data/raw/
+data/processed/

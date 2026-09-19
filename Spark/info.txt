@@ -1,0 +1,41 @@
+kafka ---> is used to manage the stream of events
+airflow ---> used to orchestrate the tasks
+spark ---> (Pyspark) mainly used to process a large amount of data + is a distributed system   
+
+
+difference between spark and pandas
+SPARK   ----->    PANDAS
+distributed sys    --->    individual system
+infrastructure    --->    simple 
+huge dataset    --->    small dataset
+works on scalable processing    --->    normal processing
+
+
+
+life cycle of Aiops where pyspark stands 
+
+Application ----events----> kafka ----spark---->
+                              ^
+                              |
+                              |
+                              |
+                            Airflow
+
+
+Architecture of spark
+
+1. Executor
+2. Worker
+3. Cluster Manager
+4. Driver (Brain of spark app)
+
+
+
+
+
+
+
+
+
+
+
