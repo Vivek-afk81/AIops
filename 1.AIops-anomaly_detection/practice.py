@@ -25,4 +25,4 @@ for time, label in zip(response_time, labels):
     if label == -1:
         print(time[0], "ms -> Anomaly")
     else:
-        print(time[0], "ms -> Normal")
+        print(time[0], "ms -> Normal") 
