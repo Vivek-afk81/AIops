@@ -1,57 +1,29 @@
+from kafka import KafkaConsumer
 import json
-from confluent_kafka import Consumer
 
+consumer = KafkaConsumer(
+    "server_metrics",
+    bootstrap_servers="localhost:9092",
+    auto_offset_reset="earliest",
+    enable_auto_commit=True,
+    group_id="aiops-monitor",
+    value_deserializer=lambda value: json.loads(value.decode("utf-8"))
+)
 
-KAFKA_BROKER = "localhost:9092"
-TOPIC = "server_metrics"
+print("Waiting for messages...")
 
+for message in consumer:
 
-# Create Kafka consumer
-consumer = Consumer({
-    "bootstrap.servers": KAFKA_BROKER,
-    "group.id": "aiops-monitor",
-    "auto.offset.reset": "earliest"
-})
+    data = message.value
 
+    server = data["server_id"]
+    cpu = data["cpu_usage"]
+    memory = data["memory_usage"]
 
-# Subscribe to the topic
-consumer.subscribe([TOPIC])
+    print("\nReceived:")
+    print("Server:", server)
+    print("CPU:", cpu, "%")
+    print("Memory:", memory, "%")
 
-
-print("Consumer started...")
-print("Listening for server metrics...\n")
-
-
-try:
-    while True:
-
-        # Wait for a message
-        message = consumer.poll(1.0)
-
-        if message is None:
-            continue
-
-        if message.error():
-            print(f"Consumer error: {message.error()}")
-            continue
-
-        # Convert JSON bytes → Python dictionary
-        data = json.loads(message.value().decode("utf-8"))
-
-        server_id = data["server_id"]
-        cpu = data["cpu_usage"]
-        memory = data["memory_usage"]
-
-        print(
-            f"Message received: {server_id} | "
-            f"CPU: {cpu}% | Memory: {memory}%"
-        )
-
-        # AIOps anomaly rule
-        if cpu > 80:
-            print(f"ALERT: High CPU detected on {server_id}")
-        else:
-            print("Normal")
-        print()
-finally:
-    consumer.close()
+    if cpu > 80:
+        print("ALERT: High CPU detected on", server)
