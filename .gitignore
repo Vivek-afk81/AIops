@@ -29,6 +29,11 @@ airflow/logs/
 airflow/airflow.cfg
 airflow/airflow.db
 airflow/*.pid
+# Airflow runtime files
+3.Airflow/airflow.db
+3.Airflow/airflow.db-shm
+3.Airflow/airflow.db-wal
+3.Airflow/logs/
 
 # Kafka, ZooKeeper, and Spark
 kafka/data/
